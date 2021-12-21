@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailView: View {
     @ObservedObject var user: User //This view shares the same user - does not create another one
     
-    var nameLocation: Int = 0 //Being defined as @State also seems to work
+    @State var nameLocation: Int = 0 //Being defined as @State also seems to work
     
     var body: some View {
         Form {
