@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailView: View {
-    @ObservedObject var user: User //This view shares the same user - does not create another one
+    @ObservedObject var user: UserStore //This view shares the same user - does not create another one
     
     var nameLocation: Int = 0 //Being defined as @State also seems to work
     
@@ -26,7 +26,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView(user: User())
+            DetailView(user: UserStore())
         }
       
     }
