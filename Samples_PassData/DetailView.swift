@@ -15,8 +15,9 @@ struct DetailView: View {
     var body: some View {
         Form {
             Section {
-                TextField("First name", text: $user.firsts[nameLocation])
-                TextField("Last name", text: $user.lasts[nameLocation])
+                //TextField("First name", text: $user.firsts[nameLocation])
+                TextField("First name", text: $user.users[nameLocation].firstName)
+                TextField("Last name", text: $user.users[nameLocation].lastName)
             }
         }.navigationTitle("User info")
         .navigationBarTitleDisplayMode(.inline)
