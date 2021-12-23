@@ -11,7 +11,7 @@ import SwiftUI
 struct Samples_PassDataApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(UserStore())
         }
     }
 }

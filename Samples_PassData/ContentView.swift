@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var user = UserStore() //This view owns the creation of the User (source of truth), so it initializes a User here
+    @EnvironmentObject var user: UserStore //This view owns the creation of the User (source of truth), so it initializes a User here
     @State private var showUser = false
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(0..<user.users.count, id:\.self) { name in //name is an Int
-                    NavigationLink(destination: DetailView(user: user, nameLocation: name))
+                    NavigationLink(destination: DetailView(nameLocation: name))
                         { Text(user.users[name].firstName) } //this will ensure names are in sync in both views
                 }.onDelete(perform: user.deleteUser)
             }.navigationTitle("Simple view")
@@ -32,6 +32,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(UserStore())
     }
 }
