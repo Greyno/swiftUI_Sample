@@ -23,7 +23,7 @@ struct ContentView: View {
                             Image(systemName: "plus")
                           })
                     }.fullScreenCover(isPresented: $showUser, content: {
-                        //When using ObservedObject, needed to pass vegetableStore here to allow ContentView to update with new items
+                        //When using ObservedObject, needed to pass userStore here to allow ContentView to update with new items
                         //When using EnvironmentObject, this passing is not needed
                         UserInputView(userStore: user)
                     })

@@ -22,8 +22,6 @@ struct UserInputView: View {
             }
             .navigationBarTitle("User Details", displayMode: .inline)
             .navigationBarItems(trailing: Button("Done") {
-                //Prevent an empty item going back to the previous screen
-                userStore.createUser(firstName: firstname, lastName: lastname)
                 userStore.addUser(firstName: firstname, lastName: lastname)
                 presentationMode.wrappedValue.dismiss()
                 })

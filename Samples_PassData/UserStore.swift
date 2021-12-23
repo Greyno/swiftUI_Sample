@@ -8,8 +8,6 @@
 import SwiftUI
 
 class UserStore: ObservableObject {
-
-    //@Published var firsts = ["Jane", "Bob", "Henry", "Susan"]
     
     var user = User(firstName: "", lastName: "")
     
