@@ -17,7 +17,7 @@ struct ContentView: View {
                 ForEach(0..<user.firsts.count, id:\.self) { name in //name is an Int
                     NavigationLink(destination: DetailView(user: user, nameLocation: name))
                         { Text(user.firsts[name]) } //this will ensure names are in sync in both views
-                }
+                }.onDelete(perform: user.deleteUser)
             }.navigationTitle("Simple view")
             .navigationBarItems(trailing: Button(action: { showUser = true }) {
                             Image(systemName: "plus")

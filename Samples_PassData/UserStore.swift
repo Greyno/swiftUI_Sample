@@ -39,5 +39,9 @@ class UserStore: ObservableObject {
         self.user = User(firstName: firstName, lastName: lastName)
         firsts.append(user.firstName)
     }
+    
+    func deleteUser(at offsets: IndexSet) {
+        firsts.remove(atOffsets: offsets)
+    }
    
 }
