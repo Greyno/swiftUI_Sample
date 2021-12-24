@@ -25,7 +25,7 @@ struct ContentView: View {
                     }.fullScreenCover(isPresented: $showUser, content: {
                         //When using ObservedObject, needed to pass userStore here to allow ContentView to update with new items
                         //When using EnvironmentObject, this passing is not needed
-                        UserInputView(userStore: user)
+                        UserInputView()
                     })
         }
     }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserInputView: View {
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var userStore: UserStore
+    @EnvironmentObject var userStore: UserStore
     @State var firstname = ""
     @State var lastname = ""
     var body: some View {
@@ -32,6 +32,6 @@ struct UserInputView: View {
 
 struct UserInputView_Previews: PreviewProvider {
     static var previews: some View {
-        UserInputView(userStore: UserStore())
+        UserInputView().environmentObject(UserStore())
     }
 }
