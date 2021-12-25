@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailView: View {
-    @EnvironmentObject var user: UserStore  another one
+    @EnvironmentObject var user: UserStore  
     
     var nameLocation: Int = 0
     
