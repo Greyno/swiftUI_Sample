@@ -63,12 +63,12 @@
 				6DC12A11275D8FBD0079E4CF /* Samples_PassDataApp.swift */,
 				6DC12A31276046CC0079E4CF /* UserStore.swift */,
 				6DC12A13275D8FBD0079E4CF /* ContentView.swift */,
+				6DD500572774D14700248574 /* UserInputView.swift */,
 				6DD500542774CF5300248574 /* User.swift */,
 				6DC12A15275D8FBE0079E4CF /* Assets.xcassets */,
 				6DC12A21275D90060079E4CF /* DetailView.swift */,
 				6DC12A1A275D8FBE0079E4CF /* Info.plist */,
 				6DC12A17275D8FBE0079E4CF /* Preview Content */,
-				6DD500572774D14700248574 /* UserInputView.swift */,
 			);
 			path = Samples_PassData;
 			sourceTree = "<group>";

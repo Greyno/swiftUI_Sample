@@ -1,8 +1,8 @@
 //
 //  UserInputView.swift
-//  Samples_PassData
+//  Sample_PassData
 //
-//  Created by Gillian Reynolds-Titko on 12/23/21.
+//  Created by G Reynolds on 12/23/21.
 //
 
 import SwiftUI

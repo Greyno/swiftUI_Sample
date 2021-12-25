@@ -1,8 +1,8 @@
 //
-//  Samples_PassDataApp.swift
-//  Samples_PassData
+//  Sample_PassDataApp.swift
+//  Sample_PassData
 //
-//  Created by Gillian Reynolds-Titko on 12/5/21.
+//  Created by G Reynolds on 12/5/21.
 //
 
 import SwiftUI

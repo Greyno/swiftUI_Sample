@@ -1,30 +1,28 @@
 //
 //  ContentView.swift
-//  Samples_PassData
+//  Sample_PassData
 //
-//  Created by Gillian Reynolds-Titko on 12/5/21.
+//  Created by G Reynolds on 12/5/21.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var user: UserStore //This view owns the creation of the User (source of truth), so it initializes a User here
+    @EnvironmentObject var user: UserStore
     @State private var showUser = false
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(0..<user.users.count, id:\.self) { name in //name is an Int
+                ForEach(0..<user.users.count, id:\.self) { name in
                     NavigationLink(destination: DetailView(nameLocation: name))
-                        { Text(user.users[name].firstName) } //this will ensure names are in sync in both views
+                        { Text(user.users[name].firstName) }
                 }.onDelete(perform: user.deleteUser)
             }.navigationTitle("Simple view")
             .navigationBarItems(trailing: Button(action: { showUser = true }) {
                             Image(systemName: "plus")
                           })
                     }.fullScreenCover(isPresented: $showUser, content: {
-                        //When using ObservedObject, needed to pass userStore here to allow ContentView to update with new items
-                        //When using EnvironmentObject, this passing is not needed
                         UserInputView()
                     })
         }
